@@ -23,7 +23,7 @@ export const getBooks = async () => {
     return books;
 };
 // TODO: Create the updateBook function that takes the arguments id, newTitle, newStart, newEnd. Inside of the function, create a PUT request for the specified book to be updated. Return the status of the response at the end of the function.
-const updateBook = async (id, newTitle, newStart, newEnd) => {
+export const updateBook = async (id, newTitle, newStart, newEnd) => {
     const response = await fetch('${API_ENDPOINT}/books/${id}', {
         method: 'PUT',
         body: JSON.stringify({
